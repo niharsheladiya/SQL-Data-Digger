@@ -1,4 +1,4 @@
--- SQLBook: Code
+-- Welcome to Data Digger Project of SQL
 SHOW DATABASES;
 
 CREATE DATABASE DataDigger;
