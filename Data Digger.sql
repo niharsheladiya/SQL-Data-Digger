@@ -1,4 +1,6 @@
 -- Welcome to Data Digger Project of SQL
+
+
 SHOW DATABASES;
 
 CREATE DATABASE DataDigger;
@@ -6,6 +8,8 @@ CREATE DATABASE DataDigger;
 SHOW DATABASES;
 
 USE DataDigger;
+
+
 
 -- TABLE CREATION
 
@@ -16,12 +20,14 @@ CREATE TABLE Customers (
     Address VARCHAR(255)
 );
 
+
 CREATE TABLE Products (
     ProductID INT AUTO_INCREMENT PRIMARY KEY,
     ProductName VARCHAR(150) NOT NULL,
     Price DECIMAL(10,2) NOT NULL,
     Stock INT NOT NULL DEFAULT 0
 );
+
 
 CREATE TABLE Orders (
     OrderID INT AUTO_INCREMENT PRIMARY KEY,
@@ -30,6 +36,7 @@ CREATE TABLE Orders (
     TotalAmount DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 );
+
 
 CREATE TABLE OrderDetails (
     OrderDetailID INT AUTO_INCREMENT PRIMARY KEY,
@@ -42,6 +49,13 @@ CREATE TABLE OrderDetails (
 );
 
 
+
+
+
+
+
+
+
 -- 1. Customers Table
 
 INSERT INTO Customers (CustomerID, Name, Email, Address) VALUES
@@ -51,7 +65,6 @@ INSERT INTO Customers (CustomerID, Name, Email, Address) VALUES
 (4, 'David',   'david@example.com',   '23 Anna Salai, Chennai'),
 (5, 'Eva',     'eva@example.com',     '9 Civil Lines, Delhi'),
 (6, 'Frank',   'frank@example.com',   '56 FC Road, Pune');
-
 
 SHOW TABLES;
 
@@ -67,6 +80,11 @@ WHERE CustomerID = 6;
 SELECT * FROM Customers
 WHERE Name = 'Alice';
 
+
+
+
+
+
 -- 2. Orders Table
 
 INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount) VALUES
@@ -80,25 +98,26 @@ INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount) VALUES
 SELECT * FROM Orders
 WHERE CustomerID = 1;
 
-
 UPDATE Orders
 SET TotalAmount = 1745.00
 WHERE OrderID = 5;
 
-
 DELETE FROM Orders
 WHERE OrderID = 6;
 
-
 SELECT * FROM Orders
 WHERE OrderDate >= DATE_SUB(CURDATE(), INTERVAL 30 DAY);
-
 
 SELECT
     MAX(TotalAmount) AS HighestOrderAmount,
     MIN(TotalAmount) AS LowestOrderAmount,
     AVG(TotalAmount) AS AverageOrderAmount
 FROM Orders;
+
+
+
+
+
 
 
 -- 3. Products Table
@@ -111,7 +130,6 @@ INSERT INTO Products (ProductID, ProductName, Price, Stock) VALUES
 (5, 'Laptop Stand',        1299.00,  40),
 (6, 'Phone Case',           299.00,   0);
 
-
 SELECT * FROM Products
 ORDER BY Price DESC;
 
@@ -121,16 +139,13 @@ WHERE ProductID = 1;
 
 SET SQL_SAFE_UPDATES = 0;   
 
-
 DELETE FROM Products
 WHERE Stock = 0;
-
 
 SET SQL_SAFE_UPDATES = 1;
 
 SELECT * FROM Products
 WHERE Price BETWEEN 500 AND 2000;
-
 
 SELECT
     MAX(Price) AS MostExpensivePrice,
@@ -141,6 +156,13 @@ SELECT ProductID, ProductName, Price
 FROM Products
 WHERE Price = (SELECT MAX(Price) FROM Products)
    OR Price = (SELECT MIN(Price) FROM Products);
+
+
+
+
+
+
+
 
 -- 4. Orderdetails Table
 
@@ -159,7 +181,6 @@ WHERE OrderID = 1;
 SELECT SUM(SubTotal) AS TotalRevenue
 FROM OrderDetails;
 
-
 SELECT
     od.ProductID,
     p.ProductName,
@@ -176,9 +197,7 @@ WHERE ProductID = 3;
 
 DROP TABLE `Customers`;
 DROP TABLE `Products`;
-
 DROP TABLE Orders;
-
 DROP TABLE OrderDetails;
 
 
