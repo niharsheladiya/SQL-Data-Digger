@@ -76,22 +76,9 @@ In this project, a structured **relational database for an E-Commerce Store** is
 [![Project Demo Video](PATH_OR_URL_TO_THUMBNAIL_IMAGE)](YOUR_VIDEO_DEMO_LINK_HERE)
 -->
 
-**📺 Video Link:** `YOUR_VIDEO_DEMO_LINK_HERE`
+**📺 Video Link:** `https://drive.google.com/file/d/1H3dd6OZ-kHdqWSBJuk4gbiCzAq9g4UKD/view?usp=sharing`
 
 </div>
-
-### 🕒 What the demo covers
-
-| ⏱️ Timestamp | 📋 Topic |
-|-------------|---------|
-| `00:00` | Project introduction and objective |
-| `01:00` | Database and table creation (PK and FK) |
-| `03:00` | Inserting sample data |
-| `05:00` | Customers and Orders queries |
-| `08:00` | Products and OrderDetails queries |
-| `11:00` | Aggregate functions and final summary |
-
-> ✏️ *Update the timestamps above after you record your video.*
 
 ---
 
