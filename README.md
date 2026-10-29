@@ -68,7 +68,7 @@ In this project, a structured **relational database for an E-Commerce Store** is
 
 <div align="center">
 
-> 🚧 **Demo video coming soon. Replace the link below with your video URL.**
+
 
 [![Watch the Demo](https://img.shields.io/badge/▶%20Watch%20Full%20Demo%20Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://drive.google.com/file/d/1H3dd6OZ-kHdqWSBJuk4gbiCzAq9g4UKD/view?usp=sharing)
 
@@ -76,7 +76,7 @@ In this project, a structured **relational database for an E-Commerce Store** is
 [![Project Demo Video](PATH_OR_URL_TO_THUMBNAIL_IMAGE)](YOUR_VIDEO_DEMO_LINK_HERE)
 -->
 
-**📺 Video Link:** ``
+**📺 Video Link:
 
 </div>
 
